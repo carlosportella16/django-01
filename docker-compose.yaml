@@ -4,8 +4,7 @@ services:
   api:
     build: .
     volumes:
-      - ./aula:/aula
-      - ./referencial:/referencial
+      - ./django:/django
     ports:
       - 8000:8000
       - 8080:8080
