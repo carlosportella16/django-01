@@ -1,16 +1,17 @@
-﻿# Módulo Introdutório > Desenvolvimento Backend > Aula 2
+﻿
+# Introductory Module > Backend Development > Lesson 2
 
-## Ambiente Python para desenvolvimento
+## Python Environment for Development
 
-- Após o download, dentro do [Visual Studio Code](https://code.visualstudio.com/), execute o comando para criar e utilizar o ambiente Python
+- After downloading, within [Visual Studio Code](https://code.visualstudio.com/), execute the command to create and use the Python environment.
 
-Comando para criar o ambiente de desenvolvimento:
+Command to create the development environment:
 
 ```
 docker-compose build
 ```
 
-Comando para utilizar o ambiente de desenvolvimento criado:
+Command to use the created development environment:
 
 ```
 docker-compose up -d
@@ -18,76 +19,76 @@ docker-compose up -d
 
 ## Visual Studio Code
 
-> Caso já tenha o Visual Studio Code instalado em seu sistema operacional, não é necessário seguir os passos abaixo
+> If you already have Visual Studio Code installed on your operating system, it is not necessary to follow the steps below.
 
-Aqui estão as instruções para instalar o Visual Studio Code (VSCode) em diferentes sistemas operacionais.
+Here are the instructions for installing Visual Studio Code (VSCode) on different operating systems.
 
 ### Windows
 
-1. Acesse o site oficial do VSCode em [https://code.visualstudio.com/](https://code.visualstudio.com/).
-2. Clique no botão de download para Windows.
-3. Execute o instalador que foi baixado (geralmente chamado VSCodeSetup.exe).
-4. Siga as instruções do instalador, aceitando os padrões recomendados, como associação de arquivos, a menos que você tenha preferências específicas.
-5. Após a instalação, inicie o Visual Studio Code a partir do menu Iniciar ou do ícone na área de trabalho.
+1. Visit the official VSCode site at [https://code.visualstudio.com/](https://code.visualstudio.com/).
+2. Click the download button for Windows.
+3. Run the downloaded installer (usually called VSCodeSetup.exe).
+4. Follow the installer's instructions, accepting the recommended defaults, such as file associations, unless you have specific preferences.
+5. After installation, start Visual Studio Code from the Start menu or the desktop icon.
 
 ### macOS
 
-1. Acesse o site oficial do VSCode em [https://code.visualstudio.com/](https://code.visualstudio.com/).
-2. Clique no botão de download para macOS.
-3. Uma vez que o arquivo .dmg for baixado, abra-o.
-4. Arraste o ícone do Visual Studio Code para a pasta de "Aplicativos" no seu Mac.
-5. Abra o VSCode a partir da pasta de "Aplicativos" ou da Dock.
+1. Visit the official VSCode site at [https://code.visualstudio.com/](https://code.visualstudio.com/).
+2. Click the download button for macOS.
+3. Once the .dmg file is downloaded, open it.
+4. Drag the Visual Studio Code icon to the "Applications" folder on your Mac.
+5. Open VSCode from the "Applications" folder or the Dock.
 
-### linux
+### Linux
 
-1. A forma mais simples de instalar o Visual Studio Code em distribuições Debian/Ubuntu é baixar e instalar o pacote .deb (64 bits)
-   [Debian ou Ubunto](https://code.visualstudio.com/download). Caso utilize outra distribuição, [neste link você encontra a documentação oficial com as explicações e passo a passo da instalação](https://code.visualstudio.com/docs/setup/linux).
+1. The simplest way to install Visual Studio Code on Debian/Ubuntu distributions is to download and install the .deb package (64-bit)
+   [Debian or Ubuntu](https://code.visualstudio.com/download). If you use another distribution, [you can find the official documentation with explanations and step-by-step installation here](https://code.visualstudio.com/docs/setup/linux).
 
-## Rodando a API Produtos utilizando o framework Django
+## Running the Products API using the Django framework
 
-Acessar o diretório fastapi-produtos
+Access the fastapi-products directory
 
 ```
 cd /referencial/src/django-produtos
 ```
 
-Criar o ambiente virtual
+Create the virtual environment
 
 ```
 python -m venv ./venv
 ```
 
-Para ativar o ambiente virtual
+To activate the virtual environment
 
 ```
 source venv/bin/activate
 ```
 
-Instalar o Django
+Install Django
 
 ```
 pip install django
 ```
 
-Criar um arquivo txt com as dependências do projeto
+Create a txt file with the project dependencies
 
 ```
 pip freeze > requirements.txt
 ```
 
-Para executar o servidor Django
+To run the Django server
 
 ```
 python manage.py runserver 0.0.0.0:8000
 ```
 
-Para criar um app no Django
+To create an app in Django
 
 ```
-python  manage.py startapp produto
+python manage.py startapp produto
 ```
 
-Criar a migração dos modelos Django no banco de dados
+Create the migration of Django models in the database
 
 ```
 python manage.py makemigrations
@@ -97,28 +98,8 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-Criar um super usuário para o Django Admin
+Create a superuser for Django Admin
 
 ```
 python manage.py createsuperuser
-```
-
-## Rodando a API Produtos utilizando o framework FastAPI
-
-Acessar o diretório fastapi-produtos
-
-```
-cd /referencial/src/fastapi-produtos
-```
-
-Para instalar os pacotes necessários para rodar o servidor FastAPI
-
-```
-pip install fastapi uvicorn
-```
-
-Para executar o servidor FastAPI
-
-```
-uvicorn app:app --host 0.0.0.0 --port 8080 --reload
 ```
